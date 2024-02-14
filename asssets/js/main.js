@@ -1,15 +1,7 @@
 const solicitarNumero = () => {
-  let numero;
-  let intentos = 0;
-
-  do {
-    numero = parseInt(prompt("Ingrese un número entre 1 y 20: "));
-    intentos++;
-  } while (isNaN(numero) || numero < 1 || numero > 20 && intentos < 1);
-
+  let numero = parseInt(prompt("Ingrese un número entre 1 y 20: "));
   if (isNaN(numero) || numero < 1 || numero > 20) {
     alert("Número fuera del rango");
-    return -1;
   } else {
     return numero;
   }
@@ -34,7 +26,6 @@ const mostrarResultados = (numero) => {
 };
 
 const numero = solicitarNumero();
-
 if (numero !== -1) {
   mostrarResultados(numero);
 }
